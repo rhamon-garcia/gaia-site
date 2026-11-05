@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gaia Tecnologias e Geosistemas | Geoprocessamento, drones e WebGIS</title>
+  <meta name="description" content="Aerolevantamento com drones, mapas temáticos, banco de dados geoespacial, relatórios técnicos e plataforma WebGIS para projetos ambientais e territoriais.">
+  <meta name="theme-color" content="#08231a">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://rhamon-garcia.github.io/gaia-site/">
+  <script>document.documentElement.classList.add("js");</script>
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Gaia Tecnologias e Geosistemas">
+  <meta property="og:url" content="https://rhamon-garcia.github.io/gaia-site/">
+  <meta property="og:title" content="Gaia Tecnologias e Geosistemas | Geoprocessamento, drones e WebGIS">
+  <meta property="og:description" content="Informação geográfica organizada para projetos ambientais e territoriais que precisam de precisão, rastreabilidade e leitura fácil.">
+  <meta property="og:image" content="https://rhamon-garcia.github.io/gaia-site/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Gaia Tecnologias e Geosistemas, informação geográfica para projetos ambientais e territoriais.">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Gaia Tecnologias e Geosistemas",
+    "url": "https://rhamon-garcia.github.io/gaia-site/",
+    "image": "https://rhamon-garcia.github.io/gaia-site/assets/og-image.png",
+    "description": "Consultoria em geotecnologia para projetos ambientais e territoriais: aerolevantamento com drones, mapas temáticos, banco de dados geoespacial, relatórios técnicos e plataforma WebGIS.",
+    "email": "gaia.tecnologias1@gmail.com",
+    "telephone": "+55-21-98686-1805",
+    "founder": {
+      "@type": "Person",
+      "name": "Rhamon Garcia",
+      "jobTitle": "Sócio e diretor"
+    },
+    "areaServed": "Brasil",
+    "knowsAbout": [
+      "Aerolevantamento com drones",
+      "Aerofotogrametria",
+      "Cartografia",
+      "WebGIS",
+      "Banco de dados geoespacial",
+      "Relatórios técnicos"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Serviços",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Aerolevantamento com drones" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mapas temáticos" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Plataforma WebGIS" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Relatórios técnicos" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Banco de dados geoespacial" } }
+      ]
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Preciso ter as bases organizadas para contratar?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Não. Organizar, padronizar e, quando necessário, recuperar as bases existentes faz parte do trabalho." }
+      },
+      {
+        "@type": "Question",
+        "name": "Vocês atendem fora do Rio de Janeiro?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sim. A estruturação de dados, a cartografia e o WebGIS são feitos de forma remota. Aerolevantamentos e trabalhos de campo são planejados caso a caso, com deslocamento previsto no escopo." }
+      },
+      {
+        "@type": "Question",
+        "name": "Qual a diferença entre mapa temático e WebGIS?",
+        "acceptedAnswer": { "@type": "Answer", "text": "O mapa temático é uma peça cartográfica feita para um tema e um uso, entregue em arquivo digital. O WebGIS é uma plataforma online, com camadas publicadas, consulta e controle de acesso." }
+      },
+      {
+        "@type": "Question",
+        "name": "Como funciona o aerolevantamento com drones?",
+        "acceptedAnswer": { "@type": "Answer", "text": "O voo é planejado a partir do objetivo do projeto. Depois do processamento, os produtos podem incluir ortomosaico, modelos digitais de elevação e de terreno e nuvem de pontos para volumetria." }
+      },
+      {
+        "@type": "Question",
+        "name": "Os produtos podem entrar em relatórios oficiais?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sim. Os mapas e dados são entregues em formatos e padrões definidos com a equipe do projeto, para uso nos relatórios e documentos já adotados." }
+      },
+      {
+        "@type": "Question",
+        "name": "Como funciona o acesso à plataforma WebGIS?",
+        "acceptedAnswer": { "@type": "Answer", "text": "As camadas são publicadas em servidor e o acesso é organizado por usuário autorizado, com ferramentas de navegação, consulta e legenda." }
+      },
+      {
+        "@type": "Question",
+        "name": "Vocês trabalham com dados de terceiros?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sim. Bases oficiais, levantamentos de campo e acervos do próprio cliente podem ser incorporados, com padronização e registro da origem." }
+      },
+      {
+        "@type": "Question",
+        "name": "Qual é o prazo de um projeto?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Depende do escopo, da quantidade de bases e do tipo de produto. O cronograma é definido no diagnóstico, antes do início da execução." }
+      },
+      {
+        "@type": "Question",
+        "name": "Como começar?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Preencha o formulário com o contexto do projeto. A partir dele, indicamos o caminho técnico e os próximos passos." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+  <svg class="svg-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <symbol id="i-drone" viewBox="0 0 256 256"><path d="M185.33,114.21l29.14-27.42.17-.17a32,32,0,0,0-45.26-45.26c0,.06-.11.11-.17.17L141.79,70.67l-83-30.2a8,8,0,0,0-8.39,1.86l-24,24a8,8,0,0,0,1.22,12.31l63.89,42.59L76.69,136H56a8,8,0,0,0-5.65,2.34l-24,24A8,8,0,0,0,29,175.42l36.82,14.73,14.7,36.75.06.16a8,8,0,0,0,13.18,2.47l23.87-23.88A8,8,0,0,0,120,200V179.31l14.76-14.76,42.59,63.89a8,8,0,0,0,12.31,1.22l24-24a8,8,0,0,0,1.86-8.39Zm-.07,97.23-42.59-63.88A8,8,0,0,0,136.8,144c-.27,0-.53,0-.79,0a8,8,0,0,0-5.66,2.35l-24,24A8,8,0,0,0,104,176v20.69L90.93,209.76,79.43,181A8,8,0,0,0,75,176.57l-28.74-11.5L59.32,152H80a8,8,0,0,0,5.66-2.34l24-24a8,8,0,0,0-1.22-12.32L44.56,70.74l13.5-13.49,83.22,30.26a8,8,0,0,0,8.56-2L180.78,52.6A16,16,0,0,1,203.4,75.23l-32.87,30.93a8,8,0,0,0-2,8.56l30.26,83.22Z"/></symbol>
+    <symbol id="i-map" viewBox="0 0 256 256"><path d="M228.92,49.69a8,8,0,0,0-6.86-1.45L160.93,63.52,99.58,32.84a8,8,0,0,0-5.52-.6l-64,16A8,8,0,0,0,24,56V200a8,8,0,0,0,9.94,7.76l61.13-15.28,61.35,30.68A8.15,8.15,0,0,0,160,224a8,8,0,0,0,1.94-.24l64-16A8,8,0,0,0,232,200V56A8,8,0,0,0,228.92,49.69ZM104,52.94l48,24V203.06l-48-24ZM40,62.25l48-12v127.5l-48,12Zm176,131.5-48,12V78.25l48-12Z"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm88,104a87.62,87.62,0,0,1-6.4,32.94l-44.7-27.49a15.92,15.92,0,0,0-6.24-2.23l-22.82-3.08a16.11,16.11,0,0,0-16,7.86h-8.72l-3.8-7.86a15.91,15.91,0,0,0-11-8.67l-8-1.73L96.14,104h16.71a16.06,16.06,0,0,0,7.73-2l12.25-6.76a16.62,16.62,0,0,0,3-2.14l26.91-24.34A15.93,15.93,0,0,0,166,49.1l-.36-.65A88.11,88.11,0,0,1,216,128ZM143.31,41.34,152,56.9,125.09,81.24,112.85,88H96.14a16,16,0,0,0-13.88,8l-8.73,15.23L63.38,84.19,74.32,58.32a87.87,87.87,0,0,1,69-17ZM40,128a87.53,87.53,0,0,1,8.54-37.8l11.34,30.27a16,16,0,0,0,11.62,10l21.43,4.61L96.74,143a16.09,16.09,0,0,0,14.4,9h1.48l-7.23,16.23a16,16,0,0,0,2.86,17.37l.14.14L128,205.94l-1.94,10A88.11,88.11,0,0,1,40,128Zm102.58,86.78,1.13-5.81a16.09,16.09,0,0,0-4-13.9,1.85,1.85,0,0,1-.14-.14L120,174.74,133.7,144l22.82,3.08,45.72,28.12A88.18,88.18,0,0,1,142.58,214.78Z"/></symbol>
+    <symbol id="i-file" viewBox="0 0 256 256"><path d="M213.66,82.34l-56-56A8,8,0,0,0,152,24H56A16,16,0,0,0,40,40V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V88A8,8,0,0,0,213.66,82.34ZM160,51.31,188.69,80H160ZM200,216H56V40h88V88a8,8,0,0,0,8,8h48V216Zm-32-80a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,136Zm0,32a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,168Z"/></symbol>
+    <symbol id="i-database" viewBox="0 0 256 256"><path d="M128,24C74.17,24,32,48.6,32,80v96c0,31.4,42.17,56,96,56s96-24.6,96-56V80C224,48.6,181.83,24,128,24Zm80,104c0,9.62-7.88,19.43-21.61,26.92C170.93,163.35,150.19,168,128,168s-42.93-4.65-58.39-13.08C55.88,147.43,48,137.62,48,128V111.36c17.06,15,46.23,24.64,80,24.64s62.94-9.68,80-24.64ZM69.61,53.08C85.07,44.65,105.81,40,128,40s42.93,4.65,58.39,13.08C200.12,60.57,208,70.38,208,80s-7.88,19.43-21.61,26.92C170.93,115.35,150.19,120,128,120s-42.93-4.65-58.39-13.08C55.88,99.43,48,89.62,48,80S55.88,60.57,69.61,53.08ZM186.39,202.92C170.93,211.35,150.19,216,128,216s-42.93-4.65-58.39-13.08C55.88,195.43,48,185.62,48,176V159.36c17.06,15,46.23,24.64,80,24.64s62.94-9.68,80-24.64V176C208,185.62,200.12,195.43,186.39,202.92Z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 256 256"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 256 256"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></symbol>
+    <symbol id="i-x" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 256 256"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 256 256"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 256 256"><path d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.18,0A254.19,254.19,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-60.75-72-118a72,72,0,0,1,144,0C200,161.23,144.53,209,128,222Z"/></symbol>
+    <symbol id="i-crosshair" viewBox="0 0 256 256"><path d="M232,120h-8.34A96.14,96.14,0,0,0,136,32.34V24a8,8,0,0,0-16,0v8.34A96.14,96.14,0,0,0,32.34,120H24a8,8,0,0,0,0,16h8.34A96.14,96.14,0,0,0,120,223.66V232a8,8,0,0,0,16,0v-8.34A96.14,96.14,0,0,0,223.66,136H232a8,8,0,0,0,0-16Zm-96,87.6V200a8,8,0,0,0-16,0v7.6A80.15,80.15,0,0,1,48.4,136H56a8,8,0,0,0,0-16H48.4A80.15,80.15,0,0,1,120,48.4V56a8,8,0,0,0,16,0V48.4A80.15,80.15,0,0,1,207.6,120H200a8,8,0,0,0,0,16h7.6A80.15,80.15,0,0,1,136,207.6ZM128,88a40,40,0,1,0,40,40A40,40,0,0,0,128,88Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,152Z"/></symbol>
+    <symbol id="i-mountain" viewBox="0 0 256 256"><path d="M164,80a28,28,0,1,0-28-28A28,28,0,0,0,164,80Zm0-40a12,12,0,1,1-12,12A12,12,0,0,1,164,40Zm90.88,155.92-54.56-92.08A15.87,15.87,0,0,0,186.55,96h0a15.85,15.85,0,0,0-13.76,7.84L146.63,148l-44.84-76.1a16,16,0,0,0-27.58,0L1.11,195.94A8,8,0,0,0,8,208H248a8,8,0,0,0,6.88-12.08ZM88,80l23.57,40H64.43ZM22,192l33-56h66l18.74,31.8,0,0L154,192Zm150.57,0-16.66-28.28L186.55,112,234,192Z"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 256 256"><path d="M232,208a8,8,0,0,1-8,8H32a8,8,0,0,1-8-8V48a8,8,0,0,1,16,0V156.69l50.34-50.35a8,8,0,0,1,11.32,0L128,132.69,180.69,80H160a8,8,0,0,1,0-16h40a8,8,0,0,1,8,8v40a8,8,0,0,1-16,0V91.31l-58.34,58.35a8,8,0,0,1-11.32,0L96,123.31l-56,56V200H224A8,8,0,0,1,232,208Z"/></symbol>
+    <symbol id="i-stack" viewBox="0 0 256 256"><path d="M230.91,172A8,8,0,0,1,228,182.91l-96,56a8,8,0,0,1-8.06,0l-96-56A8,8,0,0,1,36,169.09l92,53.65,92-53.65A8,8,0,0,1,230.91,172ZM220,121.09l-92,53.65L36,121.09A8,8,0,0,0,28,134.91l96,56a8,8,0,0,0,8.06,0l96-56A8,8,0,1,0,220,121.09ZM24,80a8,8,0,0,1,4-6.91l96-56a8,8,0,0,1,8.06,0l96,56a8,8,0,0,1,0,13.82l-96,56a8,8,0,0,1-8.06,0l-96-56A8,8,0,0,1,24,80Zm23.88,0L128,126.74,208.12,80,128,33.26Z"/></symbol>
+    <symbol id="i-compass" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216ZM172.42,72.84l-64,32a8.05,8.05,0,0,0-3.58,3.58l-32,64A8,8,0,0,0,80,184a8.1,8.1,0,0,0,3.58-.84l64-32a8.05,8.05,0,0,0,3.58-3.58l32-64a8,8,0,0,0-10.74-10.74ZM138,138,97.89,158.11,118,118l40.15-20.07Z"/></symbol>
+  </svg>
+
+  <header class="site-header" aria-label="Cabeçalho do site">
+    <nav class="nav" aria-label="Navegação principal">
+      <a class="brand" href="#topo" aria-label="Gaia Tecnologias e Geosistemas, voltar ao início">
+        <span class="brand-mark"><img src="assets/logo-mark.png" alt="" width="234" height="207"></span>
+        <span class="brand-name">Gaia<small>Tecnologias e Geosistemas</small></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#processo">Processo</a></li>
+        <li><a href="#webgis">WebGIS</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#momentos">Momentos</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+
+      <a class="btn btn-dark btn-sm nav-cta" href="#contato">Falar com especialista</a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+
+    <div class="mobile-menu" id="mobile-menu">
+      <div class="mobile-menu-inner">
+        <ul class="mobile-links">
+          <li style="--i:0"><a href="#servicos">Serviços</a></li>
+          <li style="--i:1"><a href="#processo">Processo</a></li>
+          <li style="--i:2"><a href="#webgis">WebGIS</a></li>
+          <li style="--i:3"><a href="#projetos">Projetos</a></li>
+          <li style="--i:4"><a href="#momentos">Momentos</a></li>
+          <li style="--i:5"><a href="#faq">FAQ</a></li>
+        </ul>
+        <div class="mobile-menu-foot" style="--i:6">
+          <a class="btn btn-green" href="#contato">Fale com um especialista</a>
+          <div class="mobile-contacts">
+            <a class="mobile-mail" href="mailto:gaia.tecnologias1@gmail.com">gaia.tecnologias1@gmail.com</a>
+            <a class="mobile-mail" href="tel:+5521986861805">(21) 98686-1805</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo" aria-label="Conteúdo principal">
+    <section class="hero" id="topo" aria-labelledby="hero-title">
+      <img class="hero-art" src="assets/contours-light.svg" alt="" aria-hidden="true">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow eyebrow-light">Geotecnologia aplicada ao território</p>
+          <h1 class="hero-title" id="hero-title">A informação geográfica<br class="hero-br"> do seu projeto,<br class="hero-br"> pronta para decidir.</h1>
+          <p class="hero-sub">Aerolevantamento com drones, cartografia, banco de dados e WebGIS em uma entrega única, para projetos ambientais e territoriais que precisam de precisão.</p>
+          <div class="hero-actions">
+            <a class="btn btn-lime" href="#contato">
+              Fale com um especialista
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="form-card" id="contato">
+          <div class="form-head">
+            <p class="form-kicker">Contato</p>
+            <h2 class="form-title">Fale com a Gaia</h2>
+            <p class="form-sub">Conte o básico. Retornamos com o caminho técnico para o seu projeto.</p>
+          </div>
+
+          <form id="contact-form" novalidate>
+            <div class="field">
+              <label for="name">Nome</label>
+              <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error">
+              <p class="field-error" role="alert" id="name-error"></p>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="email-error">
+              <p class="field-error" role="alert" id="email-error"></p>
+            </div>
+            <div class="field">
+              <label for="company">Empresa</label>
+              <input id="company" name="company" type="text" autocomplete="organization" aria-describedby="company-error">
+              <p class="field-error" role="alert" id="company-error"></p>
+            </div>
+            <div class="field">
+              <label for="phone">Telefone</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required placeholder="(21) 90000-0000" aria-describedby="phone-error">
+              <p class="field-error" role="alert" id="phone-error"></p>
+            </div>
+            <div class="hp-field" aria-hidden="true">
+              <label for="website">Deixe este campo vazio</label>
+              <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+            </div>
+            <button class="btn btn-green btn-block" type="submit">
+              Solicitar contato
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg>
+            </button>
+            <p class="form-note">Ao enviar, você concorda com a <a href="privacidade.html">Política de Privacidade</a>.</p>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+
+      <div class="container hero-clients">
+        <p class="hero-clients-label">Projetos atendidos</p>
+        <div class="hero-clients-names">
+          <a href="#projetos">SIG@S Maricás</a>
+          <span aria-hidden="true"></span>
+          <a href="#projetos">Instituto Ação Socioambiental</a>
+        </div>
+        <a class="hero-clients-link" href="#projetos">Ver detalhes
+          <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg>
+        </a>
+      </div>
+    </section>
+
+    <section class="section" id="desafios" aria-labelledby="desafios-title">
+      <div class="container split">
+        <div class="split-head reveal">
+          <p class="eyebrow">O diagnóstico</p>
+          <h2 class="h2" id="desafios-title">O dado existe. O que falta é estrutura.</h2>
+          <p class="lead">Em projetos ambientais e territoriais, a informação costuma estar espalhada em arquivos, planilhas e relatórios que não se conversam. A Gaia organiza essa base e transforma o dado em produto de trabalho.</p>
+        </div>
+        <ol class="pain-list">
+          <li class="reveal">
+            <span class="pain-num">01</span>
+            <div>
+              <h3>Bases dispersas</h3>
+              <p>Camadas, planilhas e documentos em pastas diferentes, sem padrão de nomes ou de projeção.</p>
+            </div>
+          </li>
+          <li class="reveal" style="--delay:80ms">
+            <span class="pain-num">02</span>
+            <div>
+              <h3>Retrabalho recorrente</h3>
+              <p>Cada relatório exige remontar mapas e conferir números que já deveriam estar consolidados.</p>
+            </div>
+          </li>
+          <li class="reveal" style="--delay:160ms">
+            <span class="pain-num">03</span>
+            <div>
+              <h3>Consulta difícil</h3>
+              <p>O dado técnico fica com uma pessoa só e não chega a quem precisa tomar a decisão.</p>
+            </div>
+          </li>
+          <li class="reveal" style="--delay:240ms">
+            <span class="pain-num">04</span>
+            <div>
+              <h3>Atualização improvisada</h3>
+              <p>Novos voos e levantamentos entram no projeto sem histórico nem controle de versão.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section-white" id="servicos" aria-labelledby="servicos-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Serviços</p>
+          <h2 class="h2" id="servicos-title">O que a Gaia faz</h2>
+          <p class="lead">Cinco frentes que se conectam. Você pode contratar uma delas ou o pacote completo, do voo à publicação.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card reveal" style="--delay:0ms">
+            <div class="service-top">
+              <span class="service-icon"><svg class="icon" aria-hidden="true"><use href="#i-drone"></use></svg></span>
+              <span class="service-num">01</span>
+            </div>
+            <h3>Aerolevantamento com drones</h3>
+            <p>Aerofotogrametria para ortomosaicos, modelos digitais de elevação e de terreno e nuvens de pontos para volumetria.</p>
+            <p class="service-tags">Ortomosaico · MDE e MDT · Volumetria</p>
+          </article>
+
+          <article class="service-card reveal" style="--delay:80ms">
+            <div class="service-top">
+              <span class="service-icon"><svg class="icon" aria-hidden="true"><use href="#i-map"></use></svg></span>
+              <span class="service-num">02</span>
+            </div>
+            <h3>Mapas temáticos</h3>
+            <p>Organização dos insumos, definição de temas e layouts, confecção das peças cartográficas e entrega digital para relatórios e documentos do projeto.</p>
+            <p class="service-tags">Pranchas · Layouts · PDF e GIS</p>
+          </article>
+
+          <article class="service-card reveal" style="--delay:0ms">
+            <div class="service-top">
+              <span class="service-icon"><svg class="icon" aria-hidden="true"><use href="#i-globe"></use></svg></span>
+              <span class="service-num">03</span>
+            </div>
+            <h3>Plataforma WebGIS</h3>
+            <p>Estruturação de plataforma para publicar camadas vetoriais com organização, padronização, navegação e consulta por usuários autorizados.</p>
+            <p class="service-tags">Camadas · Usuários · Consulta</p>
+          </article>
+
+          <article class="service-card reveal" style="--delay:80ms">
+            <div class="service-top">
+              <span class="service-icon"><svg class="icon" aria-hidden="true"><use href="#i-file"></use></svg></span>
+              <span class="service-num">04</span>
+            </div>
+            <h3>Relatórios técnicos</h3>
+            <p>Relatórios de acompanhamento periódico, em conformidade com os relatórios oficiais já produzidos no âmbito do projeto.</p>
+            <p class="service-tags">Acompanhamento · Conformidade</p>
+          </article>
+
+          <article class="service-card reveal" style="--delay:160ms">
+            <div class="service-top">
+              <span class="service-icon"><svg class="icon" aria-hidden="true"><use href="#i-database"></use></svg></span>
+              <span class="service-num">05</span>
+            </div>
+            <h3>Banco de dados geoespacial</h3>
+            <p>Organização, padronização e atualização de bases vetoriais e alfanuméricas, com consistência, integridade e rastreabilidade.</p>
+            <p class="service-tags">Padronização · Integridade · Histórico</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="statement" aria-labelledby="statement-title">
+      <div class="container">
+        <p class="statement-kicker">Nossa premissa</p>
+        <h2 class="statement-text" id="statement-title" data-statement>O território muda. A base de dados precisa acompanhar.</h2>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="entregaveis-title">
+      <div class="container">
+        <div class="benefits-panel reveal">
+          <div class="benefits-head">
+            <p class="eyebrow">Entregáveis</p>
+            <h2 class="h2" id="entregaveis-title">O que fica com você</h2>
+            <p class="lead">O resultado não é só um mapa bonito. É uma base que a equipe consegue usar, atualizar e defender tecnicamente.</p>
+          </div>
+          <div class="benefit-grid">
+            <div class="benefit">
+              <span class="benefit-icon"><svg class="icon" aria-hidden="true"><use href="#i-stack"></use></svg></span>
+              <h3>Base única e rastreável</h3>
+              <p>Camadas, metadados e versões do projeto em um só lugar, com histórico do que mudou.</p>
+            </div>
+            <div class="benefit">
+              <span class="benefit-icon"><svg class="icon" aria-hidden="true"><use href="#i-compass"></use></svg></span>
+              <h3>Menos retrabalho</h3>
+              <p>Rotinas de atualização substituem planilhas e arquivos paralelos, sem dúvida sobre qual versão é a atual.</p>
+            </div>
+            <div class="benefit">
+              <span class="benefit-icon"><svg class="icon" aria-hidden="true"><use href="#i-chart"></use></svg></span>
+              <h3>Leitura para quem decide</h3>
+              <p>Mapas e painéis que o gestor consulta sem depender do técnico para cada pergunta.</p>
+            </div>
+            <div class="benefit">
+              <span class="benefit-icon"><svg class="icon" aria-hidden="true"><use href="#i-mountain"></use></svg></span>
+              <h3>Entrega no formato do projeto</h3>
+              <p>Pranchas, relatórios, WebGIS ou banco de dados, conforme o uso e os padrões da equipe.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white" id="processo" aria-labelledby="processo-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Processo</p>
+          <h2 class="h2" id="processo-title">Do diagnóstico à entrega</h2>
+          <p class="lead">Um fluxo curto, com decisões registradas e entregas parciais para validação.</p>
+        </div>
+
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step-num">01</span>
+            <h3>Diagnóstico</h3>
+            <p>Entendemos o projeto, as bases existentes e as decisões que precisam de suporte.</p>
+          </li>
+          <li class="step reveal" style="--delay:80ms">
+            <span class="step-num">02</span>
+            <h3>Plano técnico</h3>
+            <p>Definimos escopo, padrões, produtos e cronograma, com o que entra e o que fica fora.</p>
+          </li>
+          <li class="step reveal" style="--delay:160ms">
+            <span class="step-num">03</span>
+            <h3>Produção</h3>
+            <p>Executamos voos, cartografia, modelagem e estruturação do banco geoespacial.</p>
+          </li>
+          <li class="step reveal" style="--delay:240ms">
+            <span class="step-num">04</span>
+            <h3>Entrega e acompanhamento</h3>
+            <p>Publicamos, validamos com a equipe e mantemos a base atualizada conforme o combinado.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section webgis" id="webgis" aria-labelledby="webgis-title">
+      <div class="container">
+        <div class="webgis-head">
+          <div class="reveal">
+            <p class="eyebrow">WebGIS</p>
+            <h2 class="h2" id="webgis-title">O mapa que o projeto inteiro consulta.</h2>
+          </div>
+          <div class="reveal" style="--delay:80ms">
+            <p class="lead">Organizamos as camadas, padronizamos a legenda e publicamos em uma interface que funciona no navegador, sem instalar nada.</p>
+            <ul class="check-list">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> Camadas vetoriais organizadas e padronizadas</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> Consulta por feição com atributos</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> Acesso controlado por usuário</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> Atualização contínua da base</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="browser reveal">
+          <div class="browser-bar">
+            <span class="browser-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="browser-url">gaiatecnologias-solara-geospatial.hf.space</span>
+            <a class="browser-open" href="https://gaiatecnologias-solara-geospatial.hf.space/" target="_blank" rel="noopener">
+              Abrir em tela cheia
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"></use></svg>
+            </a>
+          </div>
+          <iframe src="https://gaiatecnologias-solara-geospatial.hf.space/" title="Portfólio WebGIS da Gaia Tecnologias e Geosistemas" loading="lazy" allow="fullscreen"></iframe>
+        </div>
+        <p class="demo-note">Portfólio WebGIS da Gaia. Navegue pelas abas para explorar os modelos de mapa. Os dados são de exemplo. Se a plataforma não carregar, <a href="https://gaiatecnologias-solara-geospatial.hf.space/" target="_blank" rel="noopener">abra em nova aba</a>. O carregamento inicial pode levar alguns instantes.</p>
+      </div>
+    </section>
+
+    <section class="section" id="projetos" aria-labelledby="projetos-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Projetos atendidos</p>
+          <h2 class="h2" id="projetos-title">Quem já contou com a Gaia</h2>
+          <p class="lead">Projetos socioambientais que unem conservação, educação e gestão do território.</p>
+        </div>
+
+        <div class="client-grid">
+          <article class="client-card reveal">
+            <p class="client-type">Projeto socioambiental · Maricá, RJ</p>
+            <h3 class="client-logo"><img src="assets/logo-sigasmaricas.png" alt="Logotipo do Projeto SIG@S Maricás" width="1200" height="508" loading="lazy"></h3>
+            <p>Sistema de informação colaborativo para o levantamento da biodiversidade e da geologia das Ilhas Maricás, com ações de educação ambiental e desenvolvimento local.</p>
+            <ul class="tag-list">
+              <li>SIG colaborativo</li>
+              <li>Biodiversidade marinha</li>
+            </ul>
+            <a class="text-link" href="https://www.sigasmaricas.com.br/" target="_blank" rel="noopener" aria-label="Visitar o site do Projeto SIG@S Maricás">
+              Visitar site
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"></use></svg>
+            </a>
+          </article>
+
+          <article class="client-card reveal" style="--delay:80ms">
+            <p class="client-type">Conservação e restauração · RJ</p>
+            <h3 class="client-logo"><img src="assets/logo-acao-socioambiental.png" alt="Logotipo do Instituto Ação Socioambiental" width="440" height="200" loading="lazy"></h3>
+            <p>Atuação em conservação da Mata Atlântica, restauração florestal e educação ambiental na bacia do Guapi-Macacu, com monitoramento de áreas e dados ambientais.</p>
+            <ul class="tag-list">
+              <li>Restauração florestal</li>
+              <li>Monitoramento ambiental</li>
+            </ul>
+            <a class="text-link" href="https://www.institutoasa.org/" target="_blank" rel="noopener" aria-label="Visitar o site do Instituto Ação Socioambiental">
+              Visitar site
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"></use></svg>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white" id="momentos" aria-labelledby="momentos-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">A Gaia em campo</p>
+          <h2 class="h2" id="momentos-title">Mapas que começam fora da tela.</h2>
+          <p class="lead">Voos, campo e parcerias que dão origem às bases e aos produtos que entregamos.</p>
+        </div>
+
+        <div class="moment-grid">
+          <figure class="moment moment-large reveal">
+            <img src="assets/momento-drone.jpg" alt="Profissional operando um drone sobre uma paisagem de vales e montanhas" width="1000" height="1000" loading="lazy">
+            <figcaption class="moment-caption">
+              <span class="moment-num">01</span>
+              <span class="moment-text"><strong>Aerolevantamento</strong><small>Voo de drone para mapeamento de campo</small></span>
+            </figcaption>
+          </figure>
+
+          <figure class="moment moment-team reveal" style="--delay:80ms">
+            <img src="assets/momento-equipe.jpg" alt="Equipe em campo com camisetas do Projeto Ação Macacu" width="1000" height="1000" loading="lazy">
+            <figcaption class="moment-caption">
+              <span class="moment-num">02</span>
+              <span class="moment-text"><strong>Campo e parceria</strong><small>Equipe do Projeto Ação Macacu</small></span>
+            </figcaption>
+          </figure>
+
+          <figure class="moment reveal" style="--delay:160ms">
+            <img src="assets/momento-parceria.jpg" alt="Registro da parceria em frente à placa da Inyaga, incubadora de negócios de impacto socioambiental da UFRJ" width="1000" height="667" loading="lazy">
+            <figcaption class="moment-caption">
+              <span class="moment-num">03</span>
+              <span class="moment-text"><strong>Parceria firmada</strong><small>Instituto Ação Socioambiental e Projeto Ação Macacu</small></span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tint" aria-labelledby="sobre-title">
+      <div class="container about-grid">
+        <div class="about-portrait reveal">
+          <img class="about-photo" src="assets/rhamon-garcia.jpg" alt="Rhamon Garcia, sócio e diretor da Gaia Tecnologias e Geosistemas" width="900" height="1200" loading="lazy">
+          <div class="about-caption">
+            <strong>Rhamon Garcia</strong>
+            <span>Sócio e diretor</span>
+          </div>
+        </div>
+
+        <div class="about-copy reveal" style="--delay:80ms">
+          <p class="eyebrow">Quem está à frente</p>
+          <h2 class="h2" id="sobre-title">Rhamon Garcia</h2>
+          <p class="about-role">Sócio e diretor · Engenheiro Ambiental</p>
+          <p class="lead">Engenheiro Ambiental pela Escola Politécnica/UFRJ. Possui vasta experiência em análises de geoprocessamento, confecção de mapas e licenciamento ambiental no Estado do Rio de Janeiro. Atualmente dedica-se à gestão dos produtos cartográficos de geoprocessamento e ao desenvolvimento das aplicações interativas como sócio e diretor da Gaia.</p>
+          <p class="about-label">Formação e atuação</p>
+          <ul class="about-list">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> Engenharia Ambiental pela Escola Politécnica/UFRJ</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> Geoprocessamento, cartografia e licenciamento ambiental</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> Gestão de produtos cartográficos e aplicações interativas</li>
+          </ul>
+          <div class="incubator">
+            <img src="assets/logo-inyaga.jpg" alt="Logo da Inyaga, incubadora de negócios de impacto social e ambiental da UFRJ" width="150" height="150" loading="lazy">
+            <div>
+              <p class="incubator-title">Fazemos parte da Inyaga</p>
+              <p>Incubadora de Negócios de Impacto Social e Ambiental da UFRJ.</p>
+            </div>
+          </div>
+          <a class="text-link" href="#contato">Conversar sobre o seu projeto
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white" id="faq" aria-labelledby="faq-title">
+      <div class="container faq-grid">
+        <div class="faq-head reveal">
+          <p class="eyebrow">Dúvidas frequentes</p>
+          <h2 class="h2" id="faq-title">Antes de começar</h2>
+          <p class="lead">Se a sua pergunta não estiver aqui, escreva para a Gaia. Respondemos com base no contexto do projeto.</p>
+          <a class="text-link" href="mailto:gaia.tecnologias1@gmail.com">gaia.tecnologias1@gmail.com
+            <svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg>
+          </a>
+        </div>
+
+        <div class="faq-list reveal" style="--delay:80ms">
+          <details open>
+            <summary>Preciso ter as bases organizadas para contratar?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <div class="faq-body"><p>Não. Organizar, padronizar e, quando necessário, recuperar as bases existentes faz parte do trabalho.</p></div>
+          </details>
+          <details>
+            <summary>Vocês atendem fora do Rio de Janeiro?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <div class="faq-body"><p>Sim. A estruturação de dados, a cartografia e o WebGIS são feitos de forma remota. Aerolevantamentos e trabalhos de campo são planejados caso a caso, com deslocamento previsto no escopo.</p></div>
+          </details>
+          <details>
+            <summary>Qual a diferença entre mapa temático e WebGIS?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <div class="faq-body"><p>O mapa temático é uma peça cartográfica feita para um tema e um uso, entregue em arquivo digital. O WebGIS é uma plataforma online, com camadas publicadas, consulta e controle de acesso.</p></div>
+          </details>
+          <details>
+            <summary>Como funciona o aerolevantamento com drones?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <div class="faq-body"><p>O voo é planejado a partir do objetivo do projeto. Depois do processamento, os produtos podem incluir ortomosaico, modelos digitais de elevação e de terreno e nuvem de pontos para volumetria.</p></div>
+          </details>
+          <details>
+            <summary>Os produtos podem entrar em relatórios oficiais?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <div class="faq-body"><p>Sim. Os mapas e dados são entregues em formatos e padrões definidos com a equipe do projeto, para uso nos relatórios e documentos já adotados.</p></div>
+          </details>
+          <details>
+            <summary>Como funciona o acesso à plataforma WebGIS?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <div class="faq-body"><p>As camadas são publicadas em servidor e o acesso é organizado por usuário autorizado, com ferramentas de navegação, consulta e legenda.</p></div>
+          </details>
+          <details>
+            <summary>Vocês trabalham com dados de terceiros?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <div class="faq-body"><p>Sim. Bases oficiais, levantamentos de campo e acervos do próprio cliente podem ser incorporados, com padronização e registro da origem.</p></div>
+          </details>
+          <details>
+            <summary>Qual é o prazo de um projeto?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <div class="faq-body"><p>Depende do escopo, da quantidade de bases e do tipo de produto. O cronograma é definido no diagnóstico, antes do início da execução.</p></div>
+          </details>
+          <details>
+            <summary>Como começar?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <div class="faq-body"><p>Preencha o formulário com o contexto do projeto. A partir dele, indicamos o caminho técnico e os próximos passos.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band" aria-labelledby="cta-title">
+      <img class="cta-art" src="assets/contours-light.svg" alt="" aria-hidden="true">
+      <div class="container cta-inner reveal">
+        <p class="eyebrow eyebrow-light">Próximo passo</p>
+        <h2 class="h2" id="cta-title">Seu projeto no mapa.<br class="cta-break"> Sua equipe na mesma página.</h2>
+        <p class="lead">Conte o contexto, as bases que já existem e o que precisa ser entregue. Retornamos com o caminho técnico e os próximos passos.</p>
+        <div class="cta-actions">
+          <a class="btn btn-lime" href="#contato">
+            Fale com um especialista
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg>
+          </a>
+          <a class="cta-mail" href="mailto:gaia.tecnologias1@gmail.com">
+            <svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg>
+            gaia.tecnologias1@gmail.com
+          </a>
+          <a class="cta-mail" href="tel:+5521986861805">
+            <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
+            (21) 98686-1805
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand brand-footer" href="#topo" aria-label="Gaia Tecnologias e Geosistemas, voltar ao início">
+          <span class="brand-mark"><img src="assets/logo-mark.png" alt="" width="234" height="207"></span>
+          <span class="brand-name">Gaia<small>Tecnologias e Geosistemas</small></span>
+        </a>
+        <p>Geotecnologia, cartografia e WebGIS para projetos ambientais e territoriais.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Navegação do rodapé">
+        <h3>Navegação</h3>
+        <ul>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#processo">Processo</a></li>
+          <li><a href="#webgis">WebGIS</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#momentos">Momentos</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-contact">
+        <h3>Contato</h3>
+        <a href="mailto:gaia.tecnologias1@gmail.com">
+          <svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg>
+          gaia.tecnologias1@gmail.com
+        </a>
+        <a href="tel:+5521986861805">
+          <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
+          (21) 98686-1805
+        </a>
+        <p><svg class="icon" aria-hidden="true"><use href="#i-pin"></use></svg> Atendimento remoto e em campo</p>
+        <a class="text-link" href="#contato">Solicitar contato
+          <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© <span id="year">2026</span> Gaia Tecnologias e Geosistemas. CNPJ 47.385.358/0001-43.</p>
+      <div>
+        <a href="privacidade.html">Política de Privacidade</a>
+        <a href="termos.html">Termos de Uso</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
