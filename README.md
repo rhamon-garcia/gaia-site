@@ -20,7 +20,6 @@ site/
   assets/
     logo-gaia.png         logotipo original
     logo-mark.png         marca recortada, usada no cabeçalho
-    rhamon-garcia.jpg     foto do sócio e diretor
     logo-inyaga.jpg       logo da Inyaga
     logo-sigasmaricas.png logo do Projeto SIG@S Maricás
     logo-acao-socioambiental.png logo do Instituto Ação Socioambiental
@@ -76,7 +75,7 @@ Para domínio próprio, configure o domínio em **Settings → Pages → Custom 
 
 - Contato publicado: `gaia.tecnologias1@gmail.com` e `(21) 98686-1805`.
 - CNPJ publicado no rodapé e nas páginas legais: 47.385.358/0001-43.
-- Perfil do consultor: Rhamon Garcia, sócio e diretor, Engenheiro Ambiental pela Escola Politécnica/UFRJ.
+- A seção de equipe informa que o time reúne engenheiros ambientais e desenvolvedores e mantém o vínculo com a Inyaga.
 - O WebGIS embutido é o portfólio hospedado no Hugging Face Spaces. Os dados exibidos nele são de exemplo e pertencem ao próprio Space.
 - A página não usa cookies de rastreamento nem analytics. A fonte Geist é carregada do Google Fonts; isso está descrito na política de privacidade.
 - A logo, as cores e o tom visual foram derivados do arquivo original da marca.
